@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Pages/Login/login";
 import Dashboard from "./Pages/Dashboard/dashboard";
 import Details from "./Pages/Details/details";
-import PrivateRoute from "./Pages/PrivateRoute";
+// import PrivateRoute from "./Pages/PrivateRoute";
 // import RequireAuth from "./Components/ReqRisAuth/RequireAuth";
 // import RestrictAuth from "./Components/ReqRisAuth/RestrictAuth";
 
@@ -22,7 +22,6 @@ function App() {
         ></Route>
         <Route path="/details" element={<Details />}></Route>
       </Routes>
-      <h1>hello</h1>
     </div>
   );
 }
