@@ -52,13 +52,14 @@
 }
 
 .cocktails-center {
-    width: 45vw;
+    width: 75vw;
     margin: 0 auto;
     max-width: 1170px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 2rem;
     column-gap: 2rem;
+    margin-left: 15rem;
 }
 
 .cocktail {
@@ -94,7 +95,11 @@
 }
 
 .cocktail-footer h3 {
-    font-size: 2rem;
+    font-size: 1.2rem;
+}
+
+.cocktail-footer h4{
+    font-size: 0.8rem;
 }
 
 .cocktail-footer p {

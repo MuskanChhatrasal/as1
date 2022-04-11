@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
+import { BookProvider } from "./Context/bookContext";
 
 // dev - jrvk91u1.us.auth0.com - Domain
 // cEaeohz2qmP43eT9X0n6BlPiL72rtNCg - client Id
@@ -15,9 +16,11 @@ ReactDOM.render(
       clientId="cEaeohz2qmP43eT9X0n6BlPiL72rtNCg"
       redirectUri={window.location.origin}
     >
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <BookProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </BookProvider>
     </Auth0Provider>
   </React.StrictMode>,
   document.getElementById("root")

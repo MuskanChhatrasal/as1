@@ -20,7 +20,7 @@ function App() {
             // </PrivateRoute>
           }
         ></Route>
-        <Route path="/details" element={<Details />}></Route>
+        <Route path="/details/:bookId" element={<Details />}></Route>
       </Routes>
     </div>
   );
