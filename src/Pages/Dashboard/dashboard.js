@@ -5,13 +5,18 @@ import { Link } from "react-router-dom";
 import { useBook } from "../../Context/bookContext";
 
 const Dashboard = () => {
-  const { search, setSearch, bookData, setBookData, handleSubmit, getData } =
-    useBook();
+  const { setSearch, bookData, handleSubmit } = useBook();
+
+  // useEffect(()=>{
+  //   async(() =>{
+
+  //   })
+  // }, [search])
   return (
     <div>
       <Navbar />
       <section className="sections search">
-        <form className="search-form" onSubmit={handleSubmit}>
+        <form method="POST" className="search-form" onSubmit={handleSubmit}>
           <div className="form-control">
             <label htmlFor="name">search your favorite book</label>
             <input
@@ -20,7 +25,7 @@ const Dashboard = () => {
               id="name"
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button className="btn search-btn">Search</button>
+            {/* <button className="btn search-btn">Search</button> */}
           </div>
         </form>
       </section>

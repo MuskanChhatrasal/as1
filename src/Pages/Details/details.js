@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./details.css";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -7,8 +7,7 @@ import { useBook } from "../../Context/bookContext";
 const Details = () => {
   const { bookId } = useParams();
   // const [bookItem, setBookItem] = useState();
-  const { search, setSearch, bookData, setBookData, handleSubmit, getData } =
-    useBook();
+  const { bookData } = useBook();
 
   const getProduct = (products, productId) =>
     products.find((product) => {
